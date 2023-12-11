@@ -1,0 +1,42 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #332F2F;
+}
+
+h1 {
+    color: red;
+}
+
+
+input {
+    
+    font-size: 13px;
+    border-radius: 4px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+    border: 2px solid #dee1e2;
+    color: rgb(14, 14, 16);
+    background: #dee1e2;
+    display: block;
+    height: 30px;
+    :hover {
+        border-color: #ccc;
+    }
+    :focus{
+        border-color: #9147ff;
+        background: #fff;
+    }
+    
+  }
+
+/* register */
+.register-form {
+
+    margin: auto;
+    width: 50%;
+
+}
+
+  
