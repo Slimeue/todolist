@@ -83,6 +83,8 @@ body {
 
   
 .search-icon {
+    justify-content: center;
+    margin: auto;
     width: 40px; /* Adjust the width of the image */
     height: auto; /* Maintain aspect ratio */
 
@@ -91,12 +93,20 @@ body {
 .image-cell {
   position: relative;
   width: 100%;
-  display: flex;
+
   justify-self: center;
   align-items: center;
   cursor: pointer;
+  margin: 0 auto;
 }
-
+.imagetask{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;
+}
 .left-image,
 .right-image {
   height: 100%;
@@ -105,16 +115,12 @@ body {
     margin-left: 10px;
 }
 .left-image {
-  padding: 20px;
   margin-left: 20px;
-  margin-right: 30px; /* Adjust as needed for spacing between image and title */
-}
+  margin-right: 30px; }
 
 .task-title {
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin: auto;
+  
   text-transform: uppercase; 
 }
 
