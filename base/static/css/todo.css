@@ -60,10 +60,12 @@ body {
     background: #566E76;
     border-radius: 0 60px 60px 0;
     box-sizing: border-box;
-    margin: 0 auto;
     border: none; 
 }
+.add a{
+    height: 100%;
 
+}
 .input-container input {
     width: 100%;
     height: 100%;
@@ -84,10 +86,11 @@ body {
   
 .search-icon {
     justify-content: center;
-    margin: auto;
-    width: 40px; /* Adjust the width of the image */
-    height: auto; /* Maintain aspect ratio */
-
+    align-items: center;
+    margin: auto 0;
+    width: 90%; /* Adjust the width of the image */ /* Maintain aspect ratio */
+  
+ 
   }
 /* Add these styles for the images inside the td */
 .image-cell {
@@ -107,6 +110,10 @@ body {
     cursor: pointer;
     margin: 0 auto;
 }
+.imagetask a{
+    text-decoration-line: none;
+    color: #000;
+}
 .left-image,
 .right-image {
   height: 100%;
@@ -120,7 +127,7 @@ body {
 
 .task-title {
   margin: auto;
-  
+  color: #000;
   text-transform: uppercase; 
 }
 
@@ -158,18 +165,20 @@ td {
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
 }
 form {
-    width: 90%;
+    width: 80%;
+    height: 100%;
     justify-content: center;
     display: flex;
     margin: 0 auto;
 
 }
+
 form label {
     margin-right: 10px;
 }
 
 form .title input{
-    width: 40%;
+    width: 30%;
     height: 80px;
     border-radius: 60px;
     margin-bottom: 25px;
@@ -184,10 +193,19 @@ form .title input{
     line-height: normal;
     text-align: center;
 }
-.title label{
+.titles {
     color: #FFF;
     font-family: Inter;
-    font-size: 64px;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.date{
+    margin-left: 20px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -199,7 +217,6 @@ form .title input{
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    margin-left: 10px;
     margin-bottom: auto;
     letter-spacing: 5px;
 }
@@ -209,7 +226,7 @@ form .title input{
     border-radius: 60px;
     background: #D9D9D9;
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.60);
+    color: rgba(0, 0, 0, 0.6);
     font-family: Inter;
     font-size: 36px;
     font-style: normal;
@@ -219,8 +236,8 @@ form .title input{
     }
 .form-container{
     width: 100%;
-    justify-content: start;
-    margin-right: auto;
+    justify-content: center;
+    margin: 0 auto;
 }
 .description {
     display: flex;
@@ -231,7 +248,7 @@ form .title input{
     margin-right: 10px; /* Adjust the margin as needed */
 }
 
-form button{
+.confirmbutton{
     width: 20%;
     height: 20%;
     border-radius: 40px;
@@ -255,4 +272,71 @@ form button{
     margin-left: 10px;
     margin-bottom: auto;
     letter-spacing: 5px;
+}
+
+.tasktitle{ 
+    width: 100%;
+    height: 80px;
+    border-radius: 60px;
+    box-sizing: border-box;
+    background: #D9D9D9;
+    border: none;
+    text-transform: uppercase; 
+}
+.buttons{
+    width: 20%;
+    height: 100%;
+}
+.delete{
+   width: 100%;
+  
+}
+
+.delete img {
+    float: inline-end;
+}
+.confirm button{
+    width: 200px;
+    height: 80px;
+    border-radius: 40px;
+    background: #626C9E;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    float: inline-end;
+}
+.confirm{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    margin: 0 auto;
+}
+
+.formdelete{
+    background-color: #D9D9D9;
+    width: 40%;
+    justify-content: space-around;
+}
+form p{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 100;
+}
+.deletebutton{
+    width: 30%;
+    height: 100%;
+    margin-top: 15px;
+    border-radius: 40px;
+    background: #751919;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    float: inline-end;
 }
