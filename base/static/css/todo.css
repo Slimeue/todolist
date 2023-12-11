@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter';
+    background-color: #332F2F;
+    margin: 0;
+    padding: 0;
+
+}
+#user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+}
+
+.user-info-left {
+    width: 60%;  /* Adjust as needed */
+}
+
+.user-info-left img {
+    width: 100%;
+}
+
+.user-info-right {
+    margin-bottom: auto;
+    max-width: 40%;  /* Adjust as needed */
+    display: flex;
+}
+
+.user-info-right button {
+    width: 200%; 
+    height: 50px;
+    border-radius: 40px;
+    background: #626C9E;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+}
+.search-form {
+    text-align: center; /* Center the form content */
+  }
+  
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between input and image */
+    width: 60%;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    border-radius: 60px;
+    background: #566E76;
+  }
+  
+  input {
+    flex: 1;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 60px 0 0 60px; /* Specify values for each corner */
+    background: #566E76;
+    color: rgb(252, 252, 252);
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    }
+  
+  
+.search-icon {
+    width: 40px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adjust the spacing between input and image */
+  }
+/* Add these styles for the images inside the td */
+.image-cell {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-image,
+.right-image {
+  height: 100%;
+}
+.right-image{
+    margin-left: 10px;
+}
+.left-image {
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 30px; /* Adjust as needed for spacing between image and title */
+}
+
+.task-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase; 
+}
+
+table {
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+}
+
+th,
+td {
+    position: relative;
+    border-radius: 60px;
+    background: #D9D9D9;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-width: 100%; 
+}
+td {
+  height: 60px;
+  width: 100%;
+  white-space: nowrap; /* Prevent text wrapping in the cells */
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+}
+

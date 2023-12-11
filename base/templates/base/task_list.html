@@ -1,50 +1,53 @@
- 
- 
+{% extends 'base/taskmain.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static "css/todo.css" %}">
 
- {% extends 'base/main.html' %}
+{% if request.user.is_authenticated %}
+<div id="user-info">
+    <div class="user-info-left">
+      <img src="{% static 'img/todo.png' %}" alt="Logo">
+    </div>
+    <div class="user-info-right">
+      <!-- <p>{{ request.user }}</p> -->
+      <a href="{% url 'logout' %}">
+        <button type="submit">LOGOUT</button>
+      </a>
+    </div>
+  </div>
+  
+{% else %}
+  <a href="{% url 'login' %}"><button type="submit">LOGIN</button></a>
+{% endif %}
 
- {%block content%}
- 
- {%if request.user.is_authenticated %}
-
- <p>{{request.user}}</p>
- <a href="{% url 'logout' %}">Logout</a>
- {%else%}
- <a href="{% url 'login' %}">Login</a>
-{%endif%}
 
 
-<hr>
-<h1>My ToDo List</h1>
-<a href="{%url 'task-create'%}">Add Task</a>
+<form method="GET" class="search-form">
+    <div class="input-container">
+      <input type="text" name="search-area" value="{{ search_input }}">
+      <a href="{% url 'task-create' %}"><img src="{% static 'img/addicon.png' %}" alt="Icon" class="search-icon"></a>
+    </div>
+    
+  </form>
+  
 
-<form method="GET">
- <input type="text" name="search-area" value="{{search_input}}">
- <input type="submit" value="Search">
-</form>
-
+  <div class ="task">
 <table>
- <tr>
-     <th>Items</th>
-     <th></th>
-     <th></th>
- </tr>
- {% for task in tasks %}
- 
- <tr>
-     <td>{{task.title}}</td>
-     <td><a href="{% url 'task' task.id %}">View</a></td>
-     <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
-     <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
- </tr>
- {% empty %}
-     <h3>No Items in list</h3>
- 
- {% endfor %}
+
+  {% for task in tasks %}
+    <tr>
+        <a href="{% url 'task' task.id  %}"><td class="image-cell">
+            <img src="{% static 'img/red.png' %}" alt="Left Image" class="left-image">
+            <span class="task-title">{{ task.title }}</span>
+            <a href="{% url 'task-update' task.id %}"><img src="{% static 'img/editicon.png' %}" alt="Left Image" class="left-image"></a>
+          </td></a>
+      <!-- <td><a href="{% url 'task' task.id %}">View</a></td>
+      <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
+      <td><a href="{% url 'task-delete' task.id %}">Delete</a></td> -->
+    </tr>
+  {% empty %}
+    <h3>No Items in the list</h3>
+  {% endfor %}
 </table>
-
- {%endblock content%}
-
- 
-
-
+</div>
+{% endblock content %}
