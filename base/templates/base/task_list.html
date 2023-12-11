@@ -39,11 +39,21 @@
 
   {% for task in tasks %}
     <tr>
-        <a href="{% url 'task' task.id  %}"><td class="image-cell">
-            <img src="{% static 'img/red.png' %}" alt="Left Image" class="left-image">
-            <span class="task-title">{{ task.title }}</span>
+        <td class="image-cell">
+          {%if task.complete%}
+            <a href="{% url 'task' task.id  %}">
+            <img src="{% static 'img/green.png' %}" alt="Left Image" class="left-image">
+            <span class="task-title">{{ task.title }}</span></a>
             <a href="{% url 'task-update' task.id %}"><img src="{% static 'img/editicon.png' %}" alt="Left Image" class="left-image"></a>
-          </td></a>
+          
+          {%else%}
+            <a href="{% url 'task' task.id  %}">
+            <img src="{% static 'img/red.png' %}" alt="Left Image" class="left-image">
+            <span class="task-title">{{ task.title }}</span></a>
+            <a href="{% url 'task-update' task.id %}"><img src="{% static 'img/editicon.png' %}" alt="Left Image" class="left-image"></a>
+          {%endif%}
+           
+          </td>
       <!-- <td><a href="{% url 'task' task.id %}">View</a></td>
       <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
       <td><a href="{% url 'task-delete' task.id %}">Delete</a></td> -->
