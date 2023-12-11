@@ -1,1 +1,17 @@
-<h1>Task: {{task}}</h1>
+
+
+<label for="">TITLE:</label>
+<label for="">{{task.title}}</label>
+
+<label for="">DATE CREATED: {{task.create}}</label>
+<br>
+
+<div>
+    <label for="">DESCRIPTION:</label>
+    <p>{{task.description}}</p>
+</div>
+
+<a href="{%url 'tasks'%}">Back</a>
+<a href="{% url 'task-delete' task.id %}">Delete</a>
+
+
