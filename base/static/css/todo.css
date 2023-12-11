@@ -15,15 +15,15 @@ body {
     width: 100%;
 }
 
-.user-info-left {
+.user-info-left , .todologo {
     width: 60%;  /* Adjust as needed */
 }
 
-.user-info-left img {
-    width: 100%;
+.user-info-left img , .todologo img{
+    width: 80%;
 }
 
-.user-info-right {
+.user-info-right, .back {
     margin-bottom: auto;
     max-width: 40%;  /* Adjust as needed */
     display: flex;
@@ -41,31 +41,36 @@ body {
     font-size: 20px;
     font-weight: 700;
 }
-.search-form {
-    text-align: center; /* Center the form content */
-  }
-  
-.input-container {
+
+.input-container{
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between input and image */
-    width: 60%;
-    height: 100px;
+}
+.search {
     margin: 0 auto;
-    margin-bottom: 25px;
-    box-sizing: border-box;
-    border-radius: 60px;
+    height: 80%;
     background: #566E76;
-  }
-  
-  input {
-    flex: 1;
+    border-radius: 60px 0 0 60px;
+    box-sizing: border-box;
+    border: none; 
+}
+
+.add{
+ 
+    height: 80%;
+    background: #566E76;
+    border-radius: 0 60px 60px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: none; 
+}
+
+.input-container input {
+    width: 100%;
     height: 100%;
-    padding: 20px;
     box-sizing: border-box;
     border: none;
-    border-radius: 60px 0 0 60px; /* Specify values for each corner */
     background: #566E76;
+    border-radius: 60px 0 0 60px;
     color: rgb(252, 252, 252);
     font-family: Inter;
     font-size: 48px;
@@ -73,13 +78,14 @@ body {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.96px;
+    padding: 20px;
     }
-  
+
   
 .search-icon {
     width: 40px; /* Adjust the width of the image */
     height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Adjust the spacing between input and image */
+
   }
 /* Add these styles for the images inside the td */
 .image-cell {
@@ -145,4 +151,102 @@ td {
   overflow: hidden; /* Hide overflowing content */
   text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
 }
+form {
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
 
+}
+form label {
+    margin-right: 10px;
+}
+
+form .title input{
+    width: 40%;
+    height: 80px;
+    border-radius: 60px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    background: #D9D9D9;
+    border: none;
+    color: rgba(19, 18, 18, 0.6);
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+.title label{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.description label{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-left: 10px;
+    margin-bottom: auto;
+    letter-spacing: 5px;
+}
+.form-container textarea {
+    width: 90%;
+    height: 200px;
+    border-radius: 60px;
+    background: #D9D9D9;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.60);
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 20px;
+    }
+.form-container{
+    width: 100%;
+    justify-content: start;
+    margin-right: auto;
+}
+.description {
+    display: flex;
+    align-items: flex-start;
+}
+
+.label-container {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+form button{
+    width: 20%;
+    height: 20%;
+    border-radius: 40px;
+    background: #626C9E;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    float: inline-end;
+}
+.complete label{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-left: 10px;
+    margin-bottom: auto;
+    letter-spacing: 5px;
+}

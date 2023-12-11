@@ -24,15 +24,18 @@
 
 <form method="GET" class="search-form">
     <div class="input-container">
+      <div class="search">
       <input type="text" name="search-area" value="{{ search_input }}">
-      <a href="{% url 'task-create' %}"><img src="{% static 'img/addicon.png' %}" alt="Icon" class="search-icon"></a>
+      </div>
+      <div class="add">
+        <a href="{% url 'task-create' %}"><img src="{% static 'img/addicon.png' %}" alt="Icon" class="search-icon"></a></div>
     </div>
     
   </form>
   
 
   <div class ="task">
-<table>
+<table>              
 
   {% for task in tasks %}
     <tr>

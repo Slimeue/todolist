@@ -1,7 +1,42 @@
-<h3>Add Task</h3>
-<a href="{%url 'tasks'%}">Back</a>
+{% extends 'base/taskmain.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="user-info">
+    <div class="back">
+        <a href="{% url 'tasks' %}"><img src="{% static 'img/back.png' %}" alt="Logo"></a>
+    </div>
+    <div class="todologo">
+        <img src="{% static 'img/todo.png' %}" alt="Logo">
+    </div>
+  </div>
+
+
 <form method="post" action="">
     {%csrf_token%}
-    {{form}}
-    <input type="submit" value="Submit" id="">
+    <div class="form-container">
+        <div class ="title">
+            <label>TITLE:</label>
+            {{ form.title }}
+        </div>
+        <div class="description">
+            <div class="label-container">
+                <label for="description">DESCRIPTION:</label>
+            </div>
+            <div class="form-container">
+                {{ form.description }}
+            </div>
+        </div>
+        
+        {% if form.complete %}
+        <div class ="complete">
+        {{ form.complete }}
+        <label>COMPLETE</label>
+        </div>
+      {% endif %}
+    <button type="submit" value="Submit" id="">Confirm</button>
+    </div>
+
 </form>
+{% endblock content %}
