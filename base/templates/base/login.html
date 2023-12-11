@@ -1,0 +1,31 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="left">
+        <div class="left-container">
+            <div class="title">
+                <h1>LOGIN</h1>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.username }}
+                {{ form.password }}
+                <button type="submit" value="Login">LOGIN</button>
+            </form>
+
+            <p><a href="{% url 'register' %}">Register Here</a></p>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="right-container">
+            <img src="{% static "img/todopic.png" %}" alt="Logo">
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

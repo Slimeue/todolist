@@ -1,0 +1,7 @@
+<h3>Add Task</h3>
+<a href="{%url 'tasks'%}">Back</a>
+<form method="post" action="">
+    {%csrf_token%}
+    {{form}}
+    <input type="submit" value="Submit" id="">
+</form>
